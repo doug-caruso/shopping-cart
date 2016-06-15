@@ -1,7 +1,7 @@
 
 var ProductService = {
 
-    products:  ['name', 'price'],
+    products:  [,],
 
     getList: function () {
         ProductService.loadProducts();
