@@ -1,7 +1,7 @@
 
 var ProductService = {
 
-    products:  [,],
+    products:  [],
 
     getList: function () {
         ProductService.loadProducts();
@@ -16,7 +16,7 @@ var ProductService = {
     loadProducts: function () {
         var productsJsonText = window.localStorage.getItem('list-products');
         if(productsJsonText){
-            ProductService.products = JSON.parse(namesJsonText);
+            ProductService.products = JSON.parse(productsJsonText);
         }
     },
 

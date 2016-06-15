@@ -11,14 +11,25 @@ var ProductController={
     },
     
     displayProducts: function () {
-        var names = ProductService.getList();
-        names.forEach(HTMLService.displayAddedProduct);
+        var products = ProductService.getList();
+        products.forEach(HTMLService.displayAddedProduct);
+    },
+
+    getTotal: function () {
+        var products = ProductService.getList();
+        var i = 0;
+        products.forEach(function(pr) {
+            i+=pr.price;
+        });
+
+        console.log(i);
     }
     
+
 };
 
 ProductController.init();
-ProductController.total();
+total();
  
 function save () {
         var inputName = document.getElementById("name");
@@ -26,6 +37,8 @@ function save () {
         var ObProduct = { 'name': inputName.value, 'price': inputPrice.value};
         //var product = JSON.stringify(ObProduct);
         ProductController.addProduct(ObProduct);
+        console.log(ObProduct.name);
+        console.log(ObProduct.price);
         inputName.value = "";
         inputPrice.value = "";
 }
