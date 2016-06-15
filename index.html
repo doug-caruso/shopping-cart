@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho de Compras</title>
+</head>
+<body>
+    <form id="form-product" action="">
+        <fieldset>
+           <legend>Product</legend>
+            
+            <label for="name">Name
+            <input type="text" required id="name">
+            </label>
+            
+            <label for="price">Price
+            <input type="number" required id="price">
+            </label>
+            
+            <button onclick="save()" type="button">Add</button>
+        </fieldset>
+    </form>
+    
+    
+    <fieldset>
+        <legend>Shopping Cart</legend>
+        <ul id="list-product"></ul>
+    </fieldset>
+    
+    <script src="js/ProductService.js"></script>
+    <script src="js/HTMLService.js"></script>
+    <script src="js/ProductController.js"></script>
+</body>
+</html>
