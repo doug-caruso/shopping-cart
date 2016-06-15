@@ -18,8 +18,9 @@ var ProductController={
 };
 
 ProductController.init();
-
- function save () {
+ProductController.total();
+ 
+function save () {
         var inputName = document.getElementById("name");
         var inputPrice = document.getElementById("price");
         var ObProduct = { 'name': inputName.value, 'price': inputPrice.value};
@@ -27,4 +28,9 @@ ProductController.init();
         ProductController.addProduct(ObProduct);
         inputName.value = "";
         inputPrice.value = "";
+}
+
+function total() {
+    var inputTotal = document.getElementById("total");
+    inputTotal.value = ProductController.getTotal();
 }
